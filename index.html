@@ -8,7 +8,6 @@
         src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <title>Friis Equation & Shannon's Theorem Calculator</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 
 <body>
@@ -17,16 +16,14 @@
     </header>
     <main>
         <section id="theory">
-            <h2> Overview</h2>
-            <h3>
-                1.1: Phương trình truyền sóng (Friis) đối với trường hợp kênh truyền không có tạp âm
-            </h3>
+            <h2>Overview</h2>
+            <h3>1.1: Phương trình truyền sóng (Friis) đối với trường hợp kênh truyền không có tạp âm</h3>
             <p>Phương trình Friis thể hiện mối liên hệ công suất nhận được với công suất phát giữa 2 anten cách nhau một
                 khoảng \(R > \frac{2D^2}{\lambda} \), trong đó \( D \) là kích thước lớn nhất của anten phát. Giả sử
                 anten phát bức xạ đẳng hướng nếu công suất đầu ra của anten phát là \( P_t \) thì mật độ công suất bức
                 xạ tại điểm đầu vào của anten thu sẽ là:</p>
-            <h2>\[ W_0 = e_t \left(\frac{P_t}{4 \pi R^2}\right) \](1.1)</h2>
-            <p>Trong đó \( \eta_t \) là hiệu suất bức xạ của anten phát. Đối với anten phát không bức xạ đẳng hướng, mật
+            <h2>\[ W_0 = e_t \left(\frac{P_t}{4 \pi R^2}\right) \] (1.1)</h2>
+            <p>Trong đó \( e_t \) là hiệu suất bức xạ của anten phát. Đối với anten phát không bức xạ đẳng hướng, mật
                 độ công suất theo hướng \( \theta_t \) và \( \phi_t \) sẽ là:</p>
             <h2>\[ W_t = \frac{P_t G_t(\theta_t, \phi_t)}{4 \pi R^2} = e_t \left( \frac{P_t D_t(\theta_t, \phi_t)}{4 \pi
                 R^2} \right) \] (1.1.1) </h2>
@@ -38,9 +35,9 @@
             <h2>\[ P_r = e_r D_r(\theta_r, \phi_r) \left( \frac{\lambda^2}{4 \pi} \right) W_t = e_t e_r \left(
                 \frac{\lambda^2 D_t(\theta_t, \phi_t) D_r(\theta_r, \phi_r) P_t \text{LPF}}{(4 \pi R)^2} \right) \]
                 (1.1.3) </h2>
-            <p>Hay tỷ lệ gi ữa công suất phát và công suất thu được là:</p>
-            \[ \frac{P_r}{P_t} = e_t e_r \left( \frac{\lambda^2 D_t(\theta_r, \phi_r) D_r(\theta_r, \phi_r)}{(4 \pi
-            R)^2} \right) \] (1.1.4)
+            <p>Hay tỷ lệ giữa công suất phát và công suất thu được là:</p>
+            <h2>\[ \frac{P_r}{P_t} = e_t e_r \left( \frac{\lambda^2 D_t(\theta_r, \phi_r) D_r(\theta_r, \phi_r)}{(4 \pi
+            R)^2} \right) \] (1.1.4) </h2>
             <p>Tỷ số công suất dựa vào công thức (1-5) có được khi ta giả định rằng anten phát và anten thu phối hợp trở
                 kháng hoàn toàn với đường truyền của chúng (hệ số phản xạ của anten phát và anten thu bằng 0) và phân
                 cực của anten phát và anten thu phù hợp hoàn toàn với nhau (hiệu suất phân cực bằng 1). Trong điều kiện
@@ -48,96 +45,85 @@
                 được biểu diễn bằng phương trình Priis đầy đủ như sau: </p>
             <h2>\[ \frac{P_r}{P_t} = e_{cdt} e_{cdr} (1 - |\gamma_t|^2) (1 - |\gamma_r|^2) \left( \frac{\lambda}{4 \pi
                 R} \right)^2 D_t(\theta_r, \phi_r) D_r(\theta_r, \phi_r) \text{LPF} \] (1.1.5) </h2>
-            <h3>
-                1.2: Trong trường hợp kênh truyền có tạp âm
-            </h3>
+            <h3>1.2: Trong trường hợp kênh truyền có tạp âm</h3>
             <p>Ở đây Shannon đã chỉ ra rằng dung lượng kênh truyền C liên hệ với băng thông kênh truyền B và tỷ số công
                 suất tín hiệu trên công suất tạp âm S/N như sau: </p>
             <p>Ta còn có được Rb là tốc độ truyền ký tự của kênh và C là tốc độ truyền ký tự lớn nhất theo lý thuyết mà
                 ta có thể đạt được: </p>
-            <h3>
-                Định lý Shannon (Định lý mã hóa kênh nhiễu)
-            </h3>
-            <p>
-                Ở đây Shannon đã chỉ ra rằng dung lượng kênh truyền C liên hệ với băng thông kênh truyền B và tỷ số công suất tín hiệu trên công suất tạp âm S/N như sau: 
-            </p>
-            <h2>
-                \[ C = B \log_2 \left( 1 + \frac{P_S}{P_N} \right) \] (1.2.1) 
-            </h2>
-            <p>
-                Ta còn có được Rb là tốc độ truyền ký tự của kênh và C là tốc độ truyền ký tự lớn nhất theo lý thuyết mà ta có thể đạt được: 
-            </p>
-            <h2>
-                \[ R_b \leq C \] (1.2.2) 
-            </h2>
-            <h3>
-                2. Liên hệ giữa phương trình truyền sóng Friis và định lý Shannon </h3>
-            <p>Khi đường truyền chưa chịu tác động của tạp âm, công suất phát Pt chính là công suất tín hiệu Ps, Pt=Ps
-                và khi đó công suất thu được tại máy phát Pr1 sẽ được tính toán dựa trên công thức (1.1.5). Khi đường
-                truyền có thêm một lượng tạp âm Pn, công suất thu được tại máy thu sẽ là: </p>
-            <p>Và dung lượng kênh truyền: </p>
-            <h2>\[ P_r =P_r1 + P_N \]</h2>
-            <h2>Với \[ P_r1 =Pt e_{cdt} e_{cdr} (1 - |\gamma_t|^2) (1 - |\gamma_r|^2) \left( \frac{\lambda}{4 \pi R}
-                \right)^2 D_t(\theta_r, \phi_r) D_r(\theta_r, \phi_r) \text{LPF} \] (2) </h2>
-            <h2>\[ C = B \log_2 \left( 1 + \frac{P_R}{P_N} \right) \] (2.1) </h2>
-            <p>Như vậy khi ta có được các thông số của anten phát, anten thu, công suất phát, công suất tạp âm, băng
-                thông của đường truyền ta có thể tính toán được dung lượng kênh truyền C, công suất thu được tại anten
-                thu Pr dựa trên công thức (2) và (2.1). </p>
-        </section>
-        <section id="calculator">
-            <h2>Input Parameters</h2>
-            <form id="calcForm">
-                <label for="gammaT">\( \gamma_t \) (Biên độ hệ số phản xạ của anten phát):</label>
-                <input type="number" id="gammaT" step="0.01" required><br>
-
-                <label for="gammaR">\( \gamma_r \) (Biên độ hệ số phản xạ của anten thu):</label>
-                <input type="number" id="gammaR" step="0.01" required><br>
-
-                <label for="ecdt">\( \eta_{tdt} \) (Hiệu suất bức xạ anten phát):</label>
-                <input type="number" id="ecdt" step="0.01" required><br>
-
-                <label for="ecdr">\( \eta_{tdr} \) (Hiệu suất bức xạ của anten thu):</label>
-                <input type="number" id="ecdr" step="0.01" required><br>
-
-                <label for="lpf">\( LPF \) (Hiệu suất phân cực):</label>
-                <input type="number" id="lpf" step="0.01" required><br>
-
-                <label for="fL">\( f_L \) - (GHz):</label>
-                <input type="number" id="fL" step="0.01" required><br>
-
-                <label for="fH">\( f_H \) - (GHz):</label>
-                <input type="number" id="fH" step="0.01" required><br>
-
-                <label for="R">\( R \) (Khoảng cách giữa 2 anten) (m):</label>
-                <input type="number" id="R" step="0.1" required><br>
-
-                <label for="PN"> \( P_N \) (Công suất nhiễu) (W):</label>
-                <input type="number" id="PN" step="0.01" required><br>
-
-                <label for="Pt">\( P_t \) (Công suất anten phát) (W):</label>
-                <input type="number" id="Pt" step="0.01" required><br>
-
-                <label for="Dt">\( D_t \) (Hệ số định hướng của anten phát) (dB):</label>
-                <input type="number" id="Dt" step="0.01" required><br>
-
-                <label for="Dr">\( D_r \) (Hệ số định hướng của anten thu) (dB):</label>
-                <input type="number" id="Dr" step="0.01" required><br>
-
-                <input type="submit" value="Calculate">
-            </form>
-
-            <p>Lưu ý: Tần số trung tâm của anten sẽ được tính tại trung điểm dải tần hoạt động điền vào input.</p>
-
-            <h2>Results</h2>
-            <p class="result">\( R_b \) (Tốc độ kênh truyền) \(\leq\) \( C \) (Dung lượng kênh truyền): <span
-                    id="rbResult">N/A</span> bps</p>
-            <p class="result">P( P_r \) (Công suất thu được tại máy thu): <span id="prResult">N/A</span> W</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Transmission Channel Calculator</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-
-</html>
+            <h3>Định lý Shannon (Định lý mã hóa kênh nhiễu)</h3>
+            <p>Ở đây Shannon đã chỉ ra rằng dung lượng kênh truyền C liên hệ với băng thông kênh truyền B và tỷ số công
+                suất tín hiệu trên công suất tạp âm S/N như sau: </p>
+            <h2>\[ C = B \log_2 \left( 1 + \frac{P_S}{P_N} \right) \] (1.2.1) </h2>
+            <p>Ta còn có được Rb là tốc độ truyền ký tự của kênh và C là tốc độ truyền ký tự lớn nhất theo lý thuyết mà
+                ta có thể đạt được: </p>
+            <h2>\[ R_b \leq C \] (1.2.2) </h2>
+            <h3>2.
+                Liên hệ giữa phương trình truyền sóng Friis và định lý Shannon </h3>
+                <p>Khi đường truyền chưa chịu tác động của tạp âm, công suất phát \( P_t \) chính là công suất tín hiệu \( P_s \), \( P_t = P_s \) và khi đó công suất thu được tại máy thu \( P_r1 \) sẽ được tính toán dựa trên công thức (2.1):</p>
+                <h2>\[ P_{r1} = P_t \eta_{cdt} \eta_{cdr} (1 - |\gamma_t|^2) (1 - |\gamma_r|^2) \left( \frac{\lambda}{4 \pi R} \right)^2 D_t(\theta_r, \phi_r) D_r(\theta_r, \phi_r) LPF \] (2) </h2>
+                <p>Khi đường truyền có thêm một lượng tạp âm \( P_N \), công suất thu được tại máy thu sẽ là:</p>
+                <h2>\[ P_r = P_{r1} + P_N \] (2.1) </h2>
+                <p>Và dung lượng kênh truyền:</p>
+                <h2>\[ R_b \leq C = B \log_2 \left( 1 + \frac{P_r}{P_N} \right) \] (2.2) </h2>
+                <p>Từ đây ta có:</p>
+                <h2>\[ B \geq \frac{R_b}{\log_2\left(1 + \frac{P_r}{P_N}\right)} \] </h2>
+                <p>Như vậy:</p>
+                <h2>\[ B_{min} = \frac{R_b}{\log_2\left(1 + \frac{P_r}{P_N}\right)} \] (2.3) </h2>
+                <p>Như vậy khi ta có được các thông số của anten phát, anten thu, công suất phát, công suất tạp âm, tần số hoạt động, ta có thể tính toán được băng thông tối thiểu mà 2 anten phải đạt được và công suất thu được tại anten thu \( P_r \) dựa trên công thức (2) và (2.2).</p>
+            </section>
+            <section id="calculator">
+                <h2>Input Parameters</h2>
+                <form id="calcForm">
+                    <label for="gammaT">\( \gamma_t \) (Biên độ hệ số phản xạ của anten phát):</label>
+                    <input type="number" id="gammaT" step="0.0001" required><br>
+    
+                    <label for="gammaR">\( \gamma_r \) (Biên độ hệ số phản xạ của anten thu):</label>
+                    <input type="number" id="gammaR" step="0.00001" required><br>
+    
+                    <label for="ecdt">\( \eta_{tdt} \) (Hiệu suất bức xạ anten phát):</label>
+                    <input type="number" id="ecdt" step="0.000001" required><br>
+    
+                    <label for="ecdr">\( \eta_{tdr} \) (Hiệu suất bức xạ của anten thu):</label>
+                    <input type="number" id="ecdr" step="0.00001" required><br>
+    
+                    <label for="lpf">\( LPF \) (Hiệu suất phân cực):</label>
+                    <input type="number" id="lpf" step="0.00001" required><br>
+    
+                    <label for="fc">\( f_c \) (Tần số trung tâm) - (GHz):</label>
+                    <input type="number" id="fc" step="0.000001" required><br>
+    
+                    <label for="R_b">\( R_b \) (Tốc độ kênh truyền) - (Kbps):</label>
+                    <input type="number" id="R_b" step="0.000001" required><br>
+    
+                    <label for="R">\( R \) (Khoảng cách giữa 2 anten) (m):</label>
+                    <input type="number" id="R" step="0.000001" required><br>
+    
+                    <label for="PN"> \( P_N \) (Công suất nhiễu) (W):</label>
+                    <input type="number" id="PN" step="0.000000000000000001" required><br>
+    
+                    <label for="Pt">\( P_t \) (Công suất anten phát) (W):</label>
+                    <input type="number" id="Pt" step="0.000001" required><br>
+    
+                    <label for="Dt">\( D_t \) (Hệ số định hướng của anten phát) (dB):</label>
+                    <input type="number" id="Dt" step="0.000001" required><br>
+    
+                    <label for="Dr">\( D_r \) (Hệ số định hướng của anten thu) (dB):</label>
+                    <input type="number" id="Dr" step="0.000001" required><br>
+    
+                    <input type="submit" value="Calculate">
+                </form>
+    
+                <h2>Results</h2>
+                <p class="result">Bmin (Băng thông tối thiểu): <span
+                        id="Bminresult">N/A</span> MHz</p>
+                <p class="result">Pr (Công suất thu được tại máy thu): <span id="prResult">N/A</span> W</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Transmission Channel Calculator</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+    
+    </html>
+    
