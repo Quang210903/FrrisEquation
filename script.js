@@ -18,7 +18,7 @@ document.getElementById('calcForm').addEventListener('submit', function(e) {
     let bandwidth = fH - fL;
 
     // Shannon Capacity Calculation
-    let C = bandwidth * Math.log2(1 + Pt / PN);
+    let C = bandwidth * Math.log2(1 + Pr / PN);
 
     // Pr Calculation
     let Pr1 = (ecdt * ecdr * Dt * Dr * Pt * Math.pow(lpf / R, 2));
